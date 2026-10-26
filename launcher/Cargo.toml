@@ -1,0 +1,19 @@
+[package]
+name = "music-remover-portable"
+version = "0.1.0"
+edition = "2021"
+
+# Self-extracting single-file wrapper. Embeds the contents of ./payload (the assembled
+# dist/music-remover folder), unpacks it to a per-user cache dir on first run, then runs
+# the real music-remover.exe. Built by ../package.ps1, which populates ./payload first.
+
+[[bin]]
+name = "music-remover"
+path = "src/main.rs"
+
+[dependencies]
+include_dir = "0.7"
+rayon = "1"
+
+[profile.release]
+opt-level = 2

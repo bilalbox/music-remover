@@ -1,0 +1,41 @@
+/target
+/dist/
+/dist-single/
+/output/
+/models/
+launcher/target/
+launcher/payload/
+/bakeoff/.venv/
+/bakeoff/.venv-tiger/
+/bakeoff/out/
+/bakeoff/models/
+/bakeoff/TIGER/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Local media / bakeoff fixtures (keep out of git)
+*.mkv
+*.mp4
+*.webm
+*.wav
+*.mp3
+!bakeoff/**/*.md
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
